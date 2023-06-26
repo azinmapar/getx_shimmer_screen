@@ -1,7 +1,7 @@
 import 'package:fade_shimmer/fade_shimmer.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_shimmer_screen/controllers/shimmer_contoller.dart';
+import 'package:getx_shimmer_screen/controllers/shimmer_controller.dart';
 
 class ShimmerScreen extends StatelessWidget {
   const ShimmerScreen({super.key});
@@ -24,6 +24,7 @@ class ShimmerScreen extends StatelessWidget {
         margin: const EdgeInsets.all(10.0),
         child: ListView.separated(
           itemBuilder: (context, index) {
+            // * Shimmering like a wave
             var delay = (300 * index);
             return Obx(
               () => Get.find<ShimmerController>().isLoading.value
@@ -35,6 +36,7 @@ class ShimmerScreen extends StatelessWidget {
                       ),
                       child: Row(
                         children: [
+                          // * Circle shimmer
                           FadeShimmer.round(
                             size: 60,
                             fadeTheme: FadeTheme.dark,
@@ -46,6 +48,7 @@ class ShimmerScreen extends StatelessWidget {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
+                              // * Text Shimmer
                               FadeShimmer(
                                 width: 100.0,
                                 height: 8.0,

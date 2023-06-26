@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 import 'package:getx_shimmer_screen/controllers/navigation_bar_controller.dart';
-import 'package:getx_shimmer_screen/controllers/shimmer_contoller.dart';
+import 'package:getx_shimmer_screen/controllers/shimmer_controller.dart';
 
 class MyBindings implements Bindings {
   @override
